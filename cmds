@@ -1,1 +1,5 @@
 find . | grep ".feature$" | xargs grep  "\(\d\+\) onions\? are added$"
+find . | grep ".feature$" | while read line; do echo -n "$line " ; done
+find . | grep ".feature$" | xargs cat | grep "\s\+W"
+find . | grep ".feature$" | xargs grep "\(red\|green\|heirloom\) tomatoes \(are sliced and then added\|are added\)$"
+stepfinder "red tomatoes are added"
