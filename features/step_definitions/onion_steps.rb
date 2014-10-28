@@ -10,3 +10,6 @@ When(/^(\d+) onions? are added$/) do |count|
   end
 end
 
+Then(/^the burger should have (\d+) onions in it$/) do |onion_count|
+  expect(@burger.to_s.count{|item| item == "onions"}).to eq onion_count.to_i
+end
