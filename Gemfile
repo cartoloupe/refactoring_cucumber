@@ -1,2 +1,3 @@
 
 gem 'cucumber'
+gem 'pry'
