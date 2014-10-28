@@ -9,7 +9,7 @@ class Burger
   end
 
   def to_s
-    @stack.map(&:join)
+    @stack
   end
 
   def include? ingredient
