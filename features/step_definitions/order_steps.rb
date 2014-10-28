@@ -1,6 +1,6 @@
 require_relative '../../burger_shop.rb'
 
-Given(/^a burger is ordered$/) do
+Given(/^a (?:half )?burger is ordered$/) do
   @burger = Burger.new
 end
 
