@@ -4,6 +4,7 @@ Feature: A customer orders an onion burger
     Given an onion burger is ordered
     When a bun is added
     And some lettuce is added
+    And red tomatoes are added
     And 6 onions are added
     And a bun is added
     Then the burger should have two buns
