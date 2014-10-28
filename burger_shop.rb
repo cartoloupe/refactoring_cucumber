@@ -29,8 +29,18 @@ def add_mayonnaise_to burger
   burger.add "mayonnaise"
 end
 
-def add_bun_to burger
-  burger.add "bun"
+def method_missing(meth, *args, &block)
+  if meth.to_s =~ /^add_(crispy_bun|bun)_to$/
+    add($1, *args, &block)
+  else
+    super # You *must* call super if you don't handle the
+          # method, otherwise you'll mess up Ruby's method
+          # lookup.
+  end
+end
+
+def add(ingredient, burger, &block)
+  burger.add ingredient.gsub('_', ' ')
 end
 
 def add_onions_to burger
