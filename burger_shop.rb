@@ -47,4 +47,7 @@ def add_onions_to burger
   burger.add "onions"
 end
 
+def cut_onions
+  # cut onions
+end
 
