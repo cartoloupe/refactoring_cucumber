@@ -13,6 +13,7 @@ Then(/^the burger should have (two buns|only one bun)$/) do |bun_count_phrase|
     when /two/; 2
     when /one/; 1
     end
+  @number_of_buns = bun_count
 
   expect(@burger.to_s.count{|item| item.include? "bun"}).to eq bun_count
 end
